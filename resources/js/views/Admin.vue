@@ -43,10 +43,11 @@
 </template>
 
 <script>
-import Main from "../components/admin/Main";
-import Users from "../components/admin/Users";
-import Products from "../components/admin/Products";
-import Orders from "../components/admin/Orders";
+
+import Main from "./components/admin/Main";
+import Users from "./components/admin/Users";
+import Products from "./components/admin/Products";
+import Orders from "./components/admin/Orders";
 
 export default {
     data() {

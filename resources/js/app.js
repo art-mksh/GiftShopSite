@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+
 import App from './views/App'
 import Home from './views/Home'
 import Login from './views/Login'
