@@ -31,21 +31,26 @@ class Product extends Model
 {
     protected $fillable = [
                             'title',
-                            'slug',
+                            'parent_item_id',
                             'summary',
                             'description',
                             'cat_id',
-                            'child_cat_id',
+                            'additional_cats_ids',
                             'price',
                             'brand_id',
                             'discount',
                             'status',
                             'photo',
+                            'default_img',
+                            'img_gallery_id',
                             'size',
                             'stock',
+                            'units',
                             'is_featured',
                             'condition'
     ];
+
+
 
     public function cat_info()
     {

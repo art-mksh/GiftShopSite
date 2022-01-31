@@ -13,9 +13,22 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
+        //protected $fillable = ['user_id', 'product_id', 'order_id', 'quantity', 'amount', 'price', 'status'];
+
         Schema::create('carts', function (Blueprint $table) {
+
             $table->id();
             $table->timestamps();
+            $table->double('user_id');
+            $table->double('product_id');
+            $table->double('order_id');
+            $table->bigInteger('quantity');
+            $table->double('quantity');
+            $table->double('price');
+            $table->integer('status');
+
+
+
         });
     }
 

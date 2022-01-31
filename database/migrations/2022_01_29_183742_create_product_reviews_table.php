@@ -12,10 +12,18 @@ class CreateProductReviewsTable extends Migration
      * @return void
      */
     public function up()
+
     {
+
+
         Schema::create('product_reviews', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->double('user_id');
+            $table->double('product_id');
+            $table->integer('rate');
+            $table->string('review');
+            $table->integer('status');
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

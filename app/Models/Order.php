@@ -14,7 +14,6 @@ class Order extends Model
         'product_id',
         'user_id',
         'quantity',
-
         'address',
         'sub_total',
         'delivery_charge',
@@ -23,12 +22,13 @@ class Order extends Model
         'first_name',
         'last_name',
         'country',
+        'country_id',
         'post_code',
-        'address1',
-        'address2',
+        'additional_adress',
         'phone',
         'email',
         'payment_method',
+        'delivery_method',
         'payment_status',
         'shipping_id',
         'coupon'
