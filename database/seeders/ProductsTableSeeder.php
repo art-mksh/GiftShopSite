@@ -16,11 +16,19 @@ class ProductsTableSeeder extends Seeder
     {
 
 
+
+
         $products = [
             [
                 'name' => "Мыло №1",
                 'title' => "Мыло №1",
+                'is_featured' => '',
+                'additional_cats_ids' => '',
+                'item_settings' => json_encode([]),
+                'img_gallery_id' => 0,
                 'cat_id' => 1,
+                'condition' => 1,
+                'size' => '',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.',
                 'units' => 21,
@@ -30,11 +38,19 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://www.bitovayahimiyaoptom.ru/wp-content/uploads/2020/09/Mylo-hozyai-stvennoe-EFKO-22Rus-7222-200-g.jpg',
                 'default_img' =>'https://www.bitovayahimiyaoptom.ru/wp-content/uploads/2020/09/Mylo-hozyai-stvennoe-EFKO-22Rus-7222-200-g.jpg',
                 'created_at' => new \DateTime(),
-                'updated_at' => null,
+                'updated_at' => new \DateTime(),
             ],
             [
                 'name' => "Мыло №2",
                 'title' =>"Мыло №2",
+                'additional_cats_ids' => '',
+                'status' => 1,
+                'item_settings' =>json_encode([]),
+                'img_gallery_id' => 0,
+                'is_featured' => '',
+                'condition' => 1,
+
+                'size' => '',
                 'cat_id' => 1,
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.',
@@ -44,11 +60,19 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://cdn1.ozone.ru/multimedia/1036104606.jpeg',
                 'default_img' => 'https://media.nashaspravka.ru/attachments/ncg/publications/0/24/24996/thumb_1448865975-f336df00f0.jpg',
                 'created_at' => new \DateTime(),
-                'updated_at' => null,
+                'updated_at' => new \DateTime(),
             ],
             [
                 'name' => "Мыло №3",
                 'title' =>"Мыло №3",
+                'additional_cats_ids' => '',
+                'item_settings' =>json_encode([]),
+                'img_gallery_id' => 0,
+                'is_featured' => '',
+                'condition' => 1,
+
+                'status' => 1,
+                'size' => '',
                 'cat_id' => 1,
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.',
@@ -58,11 +82,19 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Savonette_2008.jpg/1200px-Savonette_2008.jpg',
                 'default_img' => 'https://media.nashaspravka.ru/attachments/ncg/publications/0/24/24996/thumb_1448865975-f336df00f0.jpg',
                 'created_at' => new \DateTime(),
-                'updated_at' => null,
+                'updated_at' => new \DateTime(),
             ],
             [
                 'name' => 'Мыло мыльное №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№',
                 'title' =>'Мыло мыльное №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№',
+                'additional_cats_ids' => '',
+                'item_settings' => json_encode([]),
+                'img_gallery_id' => 0,
+                'is_featured' => '',
+                'condition' => 1,
+
+                'status' => 1,
+                'size' => '',
                 'cat_id' => 1,
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua consequat.',
@@ -72,7 +104,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://media.nashaspravka.ru/attachments/ncg/publications/0/24/24996/thumb_1448865975-f336df00f0.jpg',
                 'default_img' => 'https://media.nashaspravka.ru/attachments/ncg/publications/0/24/24996/thumb_1448865975-f336df00f0.jpg',
                 'created_at' => new \DateTime(),
-                'updated_at' => null,
+                'updated_at' => new \DateTime(),
             ]
         ];
 

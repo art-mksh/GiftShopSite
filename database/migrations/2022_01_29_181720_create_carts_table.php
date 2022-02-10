@@ -22,7 +22,6 @@ class CreateCartsTable extends Migration
             $table->double('user_id');
             $table->double('product_id');
             $table->double('order_id');
-            $table->bigInteger('quantity');
             $table->double('quantity');
             $table->double('price');
             $table->integer('status');
