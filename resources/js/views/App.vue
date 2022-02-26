@@ -1,5 +1,31 @@
 <template>
     <div>
+        <Header />
+
+        <div id="wrapper">
+            <div id="content-wrapper">
+                <router-view></router-view>
+                <!-- container-fluid div Replaced by router-view -->
+
+                <main class="py-4">
+                    <router-view @loggedIn="change"></router-view>
+                </main>
+
+                <Footer />
+            </div>
+        </div>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        />
+    </div>
+</template>
+
+<!--
+<template>
+
+    <div>
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <div class="col-md-2">
@@ -13,22 +39,29 @@
 
                 <div class="col-md-10">
                     <div class="row cstm-pre-header-block">
-                        <div class="col-md-3 cstm-space-margin-top-1">
-                            <div class="row">#1 PHONE</div>
-                            <div class="row">#2 SECOND PHONE</div>
-                        </div>
-                        <div class="col-md-3 cstm-space-margin-top-1">ONE ADRESS</div>
-                        <div class="col-md-3 cstm-space-margin-top-1">
-                            <button type="button" class="btn btn-outline-primary cstm-round-btn"><i class="bi bi-pencil"></i> Напиши нам</button>
+                        <div class="col-md-2 cstm-space-margin-top-1">
+                            <div class="row cstm-phone-elm" href="tel:88005119903">8 800 511 99 03</div>
+                            <div class="row cstm-phone-elm" href="tel:88005119903">8 902 47 51 881</div>
                         </div>
                         <div class="col-md-3 cstm-space-margin-top-1">
-                            <div class="row">
+                            <span style="line-height: 3em;">
+                                <i class="bi bi-geo-alt cstm-header-icon"></i>
+                                г. Пермь, ул. Пушкина, 109
+                            </span>
+                        </div>
+                        <div class="col-md-3 cstm-space-margin-top-1" style="text-align: center;">
+                            <button type="button" class="btn btn-outline-primary cstm-round-btn" style="margin-top: 0.4em;">
+                                <i class="bi bi-pencil"></i> Напиши нам
+                            </button>
+                        </div>
+                        <div class="col-md-4 cstm-space-margin-top-1">
+                            <div class="row" style="margin-top: 0.4em;">
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-4">
-                                             <i class="bi bi-person cstm-login-icon"></i>
+                                             <i class="bi bi-person cstm-header-icon cstm-round-icon"></i>
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 cstm-pre-icon-pad">
                                             <div class="row">
                                                <span class="cstm-enter-span"> Войти </span>
                                             </div>
@@ -38,7 +71,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">CART BUTTON AND ICON</div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <i class="bi bi-cart cstm-header-icon cstm-round-icon"></i>
+                                        </div>
+                                        <div class="col-md-8 cstm-pre-icon-pad">
+                                            <div class="row">
+                                                <span class="cstm-enter-span">
+                                                    Корзина
+                                                </span>
+                                            </div>
+                                            <div class="row">
+                                                <span class="cstm-registration-span">
+                                                    99
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,7 +131,9 @@
                         </div>
                     </div>
                 </div>
-                <!--
+-->
+
+<!--
         <router-link :to="{ name: 'home' }" class="navbar-brand"
           >Big Store</router-link
         >
@@ -132,6 +185,8 @@
           </ul>
         </div>
         -->
+
+<!--
             </div>
         </nav>
         <main class="py-4">
@@ -142,9 +197,18 @@
 
     </div>
 </template>
+-->
 
 <script>
+
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
 export default {
+    components: {
+		Header,
+		Footer
+	},
     data() {
         return {
             name: null,
@@ -175,47 +239,5 @@ export default {
         },
     },
 };
+
 </script>
-
-<style>
-.cstm-pre-sub-row{
-    margin-top: 0.5em;
-}
-.cstm-sub-btns {
-    width: fit-content;
-}
-
-.cstm-main-sub-row{
-    margin-top: 1em;
-}
-
-.cstm-pre-header-block{
-    padding-bottom: 1em;
-    border-bottom: 1px solid grey;
-}
-
-.cstm-space-margin-top-1{
-        margin-top: 1em
-
-}
-
-.cstm-round-btn{
-
-    border-radius: 1.5em;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-.cstm-login-icon{
-    font-size: 2em;
-}
-
-.cstm-enter-span{
- font-size: 1.2em;
-}
-
- .cstm-registration-span{
-                       font-size: 0.8em;
-}
-</style>
-

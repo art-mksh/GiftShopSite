@@ -13,3 +13,62 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+
+.cstm-pre-sub-row {
+    margin-top: 0.5em;
+}
+.cstm-sub-btns {
+    width: fit-content;
+    font-weight: bold;
+}
+
+.cstm-main-sub-row {
+    margin-top: 1em;
+}
+
+.cstm-pre-header-block {
+    padding-bottom: 1em;
+    border-bottom: 1px solid grey;
+}
+
+.cstm-space-margin-top-1 {
+    margin-top: 1em;
+}
+
+.cstm-round-btn {
+    border-radius: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-weight: bold;
+}
+
+.cstm-header-icon {
+    font-size: 1.4em;
+}
+
+.cstm-round-icon {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+    /* padding: 0.35em 0.6em; */
+    padding: 0.2em 0.6em;
+}
+
+.cstm-enter-span {
+    /* font-size: 1.2em; */
+    font-size: 1em;
+}
+
+.cstm-registration-span {
+    font-size: 0.8em;
+}
+
+.cstm-pre-icon-pad {
+    padding-left: 1.5em;
+}
+
+.cstm-phone-elm {
+    font-weight: bold;
+    font-size: 1.1em;
+}
