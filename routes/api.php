@@ -33,6 +33,8 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::patch('orders/{order}/deliver',[OrderController::class, 'deliverOrder']);
     Route::resource('/orders', OrderController::class);
     Route::resource('/products', ProductController::class)->except(['index','show']);
+
+    Route::get('site-settings/{id}',[UserController::class, 'get']);
 });
 
 /*

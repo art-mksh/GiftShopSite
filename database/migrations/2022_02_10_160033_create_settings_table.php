@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSettingsTable extends Migration
+class CreateSiteSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,7 @@ class CreateSettingsTable extends Migration
 
     public function up()
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('site_settings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('site_id')->unique();
             $table->string('city_id');
@@ -44,6 +44,6 @@ class CreateSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('site_settings');
     }
 }

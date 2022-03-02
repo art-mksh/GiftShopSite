@@ -32,6 +32,6 @@ class SettingTableSeeder extends Seeder
             'instagramm'=>'',
             'youtube'=>'',
         );
-        DB::table('settings')->insert($data);
+        DB::table('site_settings')->insert($data);
     }
 }

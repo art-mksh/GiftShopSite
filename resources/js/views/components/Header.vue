@@ -126,3 +126,50 @@
         </div>
     </nav>
 </template>
+
+
+<script>
+
+    //import useCompanies from '../../composables/companies'
+    import useSiteSettings from '../../composable/SiteSettings';
+    //import { onMounted } from 'vue';
+    //console.log('test');
+
+    export default {
+
+        setup() {
+            //const { companies, getCompanies } = useCompanies()
+            const { settings, getSettings } = useSiteSettings();
+
+            //onMounted(getCompanies)
+            console.log('test1');
+            onMounted(getSettings);
+            console.log('test2');
+
+            console.log(settings);
+            return {
+                //companies,
+                //settings
+                useSiteSettings
+            }
+
+
+        }
+
+
+    }
+    /*
+    export default {
+    data() {
+        return {
+        products: [],
+        };
+    },
+    mounted() {
+        axios
+        .get("api/products/")
+        .then((response) => (this.products = response.data));
+    },
+    };
+    */
+</script>

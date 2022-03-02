@@ -1,0 +1,46 @@
+[
+    {
+        "type": "Group",
+        "name": "sitesettings",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "0AQjw3WsqhaBoyL7"
+    },
+    {
+        "type": "File",
+        "name": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\app\\Models\\SiteSettings.php",
+        "parent_id": "0AQjw3WsqhaBoyL7",
+        "fsPath": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\app\\Models\\SiteSettings.php",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "C9DwTbFEdc1Zy4Hu"
+    },
+    {
+        "type": "File",
+        "name": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\database\\seeders\\SettingTableSeeder.php",
+        "parent_id": "0AQjw3WsqhaBoyL7",
+        "fsPath": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\database\\seeders\\SettingTableSeeder.php",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "MFS210s8pjzqUx6L"
+    },
+    {
+        "type": "File",
+        "name": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\app\\Http\\Controllers\\SiteSettingsController.php",
+        "parent_id": "0AQjw3WsqhaBoyL7",
+        "fsPath": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\app\\Http\\Controllers\\SiteSettingsController.php",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "la98FSc0jYnIM5Wo"
+    },
+    {
+        "type": "File",
+        "name": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\resources\\js\\composable\\SiteSettings.js",
+        "parent_id": "0AQjw3WsqhaBoyL7",
+        "fsPath": "e:\\ProgrammingProjects\\LaravelProjects\\GiftShop\\resources\\js\\composable\\SiteSettings.js",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "eSkv84zBd71WmQPr"
+    }
+]
