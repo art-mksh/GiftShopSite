@@ -14,6 +14,8 @@ import Checkout from './views/Checkout'
 import Confirmation from './views/Confirmation'
 import UserBoard from './views/UserBoard'
 import Admin from './views/Admin'
+import Header from './views/components/Header'
+
 
 const router = new VueRouter({
     mode: 'history',
@@ -76,10 +78,16 @@ const router = new VueRouter({
                 is_admin: true
             }
         },
+        {
+            path: '/site-settings',
+            name: 'site-settings',
+            component: Header,
+        },
     ],
 })
 
 router.beforeEach((to, from, next) => {
+
     if (to.matched.some(record => record.meta.requiresAuth)) {
         if (localStorage.getItem('bigStore.jwt') == null) {
             next({
@@ -106,6 +114,7 @@ router.beforeEach((to, from, next) => {
             }
             next()
         }
+
     } else {
         next()
     }

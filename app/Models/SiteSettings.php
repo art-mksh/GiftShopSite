@@ -31,7 +31,8 @@ class SiteSettings extends Model
 
     public function getAllSiteData($site_id)
     {
-        return $this::where('site_id', $site_id);
+        //return $this::where('site_id', $site_id);
+        return 'false';
 
     }
 }

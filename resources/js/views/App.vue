@@ -1,6 +1,9 @@
 <template>
     <div>
-        <Header />
+        <!-- <Header /> -->
+        <keep-alive>
+            <component :is="GetHeader"/>
+        </keep-alive>
 
         <div id="wrapper">
             <div id="content-wrapper">
@@ -78,26 +81,33 @@
 
 <script>
 
-import Header from "./components/Header.vue";
+//import Header from "./components/Header";
 import Footer from "./components/Footer.vue";
+const Header = () => import("./components/Header");
+
 
 export default {
-    components: {
-		Header,
-		Footer
-	},
+    //components: {
+	//	'Header':Header,
+	//	'Footer': Footer
+	//},
     data() {
         console.log(1);
-        console.log(Header);
+        //console.log(Header);
         return {
             name: null,
             user_type: 0,
             isLoggedIn: localStorage.getItem("bigStore.jwt") != null
         };
     },
+    computed: {
+        GetHeader(){
+                  if (1) return Header;
+        }
+    },
     mounted() {
+        //console.log(this);
         this.setDefaults();
-        console.log(this);
     },
     methods: {
         setDefaults() {

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SiteSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,17 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::post('/upload-file',[ProductController::class, 'uploadFile']);
 Route::get('/products/{product}',[ProductController::class, 'show']);
 
+//Route::get('/site-settings/{id}',[SiteSettingsController::class, 'get']);
+//Route::get('/site-settings/',[SiteSettingsController::class, 'get']);
+
+Route::apiResource('site-settings', SiteSettingsController::class);
+
+//Route::get('/site-settings/{id}', function () {
+//Route::redirect('site-settings', '/products', 301);
+//    return 'Hello World';
+//});
+
+
 Route::group(['middleware' => 'auth:api'], function(){
     Route::get('/users',[UserController::class, 'index']);
     Route::get('users/{user}',[UserController::class, 'show']);
@@ -34,8 +46,8 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::resource('/orders', OrderController::class);
     Route::resource('/products', ProductController::class)->except(['index','show']);
 
-    Route::get('site-settings/{id}',[UserController::class, 'get']);
 });
+
 
 /*
 
