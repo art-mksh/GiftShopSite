@@ -1,5 +1,8 @@
 //require('./bootstrap');
 import Vue from 'vue'
+//import * as Vue from 'vue'
+
+
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)

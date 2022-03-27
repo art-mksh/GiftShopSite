@@ -1,6 +1,14 @@
 import axios from 'axios';
 import VueRouter from 'vue-router';
-import Vue from 'vue';
+//import Vue from 'vue';
+//import * as Vue from 'vue'
+//import { onMounted } from 'vue'
+
+
+
+
+
+
 
 
 export default function useSiteSettings() {
@@ -9,7 +17,9 @@ export default function useSiteSettings() {
     //const company = Vue.ref([]);
     //const companies = ref([]);
     //const settings = ref([]);
-    let settings = {};
+
+    //let settings = {};
+    const settings = ref({});
 
     //let settings = {'test':1};
 
@@ -23,6 +33,8 @@ export default function useSiteSettings() {
     //const getSettings = async () => {
     const getSettings =  async () => {
 
+        console.log('settings');
+
         //let settings = {};
         //console.log(settings_url+'/${id}');
         //updated_url = settings_url+'/${id}';
@@ -30,7 +42,8 @@ export default function useSiteSettings() {
         //let response = await axios.get(settings_url+'/${id}')
         //console.log('request12');
         const current_func_url = settings_url;
-        let response = await axios.get(current_func_url)
+        let response = await axios.get(current_func_url);
+        console.log(response);
         //console.log('response1');
 
         //console.log(response);
@@ -58,7 +71,7 @@ export default function useSiteSettings() {
         //console.log('settings');
         //console.log(settings);
 
-        return settings;
+        //return settings;
     }
 
     /*
@@ -102,9 +115,14 @@ export default function useSiteSettings() {
     }
     */
 
+    return {
+        getSettings,
+        settings
+    };
+
+    //return getSettings();
 
 
-    return getSettings();
         //errors,
         //company,
         //companies,

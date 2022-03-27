@@ -9,7 +9,6 @@
                     />
                 </a>
             </div>
-
             <div class="col-md-10">
                 <div class="row cstm-pre-header-block">
                     <div class="col-md-2 cstm-space-margin-top-1">
@@ -140,19 +139,47 @@
 </template>
 
 <script>
+
+
 //import useCompanies from '../../composables/companies'
 import useSiteSettings from "../../composable/SiteSettings";
-import axios from 'axios';
+//import axios from 'axios';
 
-//import { onMounted } from 'vue';
 //console.log('test');
 
 export default {
-    name: "Header",
-    /*
+    //name: "Header",
+
     setup() {
 
 
+                //const { companies, getCompanies } = useCompanies()
+
+        const { settings, getSettings } = useSiteSettings();
+
+
+        //const attending = ref(["Tim", "Bob", "Joe"]);
+
+        //onMounted(getCompanies)
+        //console.log('test1');
+        //onMounted(getSettings);
+        //console.log('test2');
+
+        //console.log(settings);
+        //getSettings();
+    console.log('te1t');
+        onMounted(getSettings);
+        console.log(settings);
+        return {
+            settings,
+            //sitesettings,
+            //useSiteSettings,
+            //attending
+        };
+
+
+
+        /*
         //const { companies, getCompanies } = useCompanies()
 
         const { settings, getSettings } = useSiteSettings();
@@ -179,12 +206,13 @@ export default {
         return {
             settings,
         }
+        */
 
 
 
 
     },
-    */
+
 
     /*
         data(){
@@ -221,25 +249,31 @@ export default {
         },
     },
     */
-
+   /*
    data(){
         return {
             facebookTooltip: "Follow us on Facebook",
-            /*
-            sitesettings: {
-                type: Object,
-                default: () => ({}),
-                //default: () => (useSiteSettings())
-            },
-            */
-            settings: {
-                type: Object,
-                default: () => ({}),
-                //default: () => (useSiteSettings())
-            },
+
+
+            //sitesettings: {
+            //    type: Object,
+            //    default: () => ({}),
+           //     //default: () => (useSiteSettings())
+            //},
+
+
+
+            //settings: {
+            //    type: Object,
+            //    default: () => ({}),
+            //    //default: () => (useSiteSettings())
+            //},
+
             loading:true
         };
    },
+   */
+    /*
     getters: {
         fullName: function (state) {
             return `${state.firstName} ${state.lastName}`;
@@ -254,17 +288,20 @@ export default {
     },
     methods:{
         change_settings(settings) {
-            console.log('change settings');
+            //console.log('change settings');
 
-            console.log(settings);
-            this.sitesettings = settings;
+            //console.log(settings);
+            //this.sitesettings = settings;
 
         }
     },
-    mounted() {
-        console.log('mounted');
+    */
+    //mounted() {
+        //console.log(typeof(settings));
+        //console.log('mounted');
 
 
+        /*
         useSiteSettings()
             .then((response) => {
 
@@ -301,13 +338,13 @@ export default {
 
                 //console.log(this.settings.default_phone);
 
-                /*
-                this.settings['default_phone_number_href_formated'] = ( this.settings.default_phone).replace(/[^+\d]+/g, "");
-                this.settings['additional_phone_number_href_formated'] = ( this.settings.additional_phone).replace(/[^+\d]+/g, "");
 
-                this.settings['default_phone_number_href_formated'] = ( this.settings.default_phone).replace(/[^+\d]+/g, "");
-                this.settings['additional_phone_number_href_formated'] = ( this.settings.additional_phone).replace(/[^+\d]+/g, "");
-                */
+                //this.settings['default_phone_number_href_formated'] = ( this.settings.default_phone).replace(/[^+\d]+/g, "");
+                //this.settings['additional_phone_number_href_formated'] = ( this.settings.additional_phone).replace(/[^+\d]+/g, "");
+
+                //this.settings['default_phone_number_href_formated'] = ( this.settings.default_phone).replace(/[^+\d]+/g, "");
+                //this.settings['additional_phone_number_href_formated'] = ( this.settings.additional_phone).replace(/[^+\d]+/g, "");
+
 
                 //console.log('// emit ended');
 
@@ -325,13 +362,14 @@ export default {
                 this.loading = false;
                 //this.sitesettings = cur_site_set;
             });
-
+        */
 
 
             //.finally(() => (this.loading = false));
-    },
+    //},
+     /*
     computed: {
-        /*
+
         getSettings() {
             let total =
                 (this.order.total + this.order.tax) * (1 - this.order.discount);
@@ -344,9 +382,9 @@ export default {
         numProductsAdded() {
             return this.$store.getters.productsAdded.length;
         },
-        */
-    }
 
+    }
+*/
 
 };
 

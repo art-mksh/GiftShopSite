@@ -1,9 +1,12 @@
 <template>
     <div>
-        <!-- <Header /> -->
+        <Header />
+
+        <!--
         <keep-alive>
             <component :is="GetHeader"/>
         </keep-alive>
+        -->
 
         <div id="wrapper">
             <div id="content-wrapper">
@@ -92,7 +95,7 @@ export default {
 	//	'Footer': Footer
 	//},
     data() {
-        console.log(1);
+        //console.log(1);
         //console.log(Header);
         return {
             name: null,
@@ -101,9 +104,13 @@ export default {
         };
     },
     computed: {
-        GetHeader(){
-                  if (1) return Header;
-        }
+        //GetHeader(){
+        //    return Header;
+        //}
+
+        //GetHeader(){
+        //          if (1) return Header;
+        //}
     },
     mounted() {
         //console.log(this);
@@ -128,6 +135,10 @@ export default {
             this.$router.push("/");
         },
     },
+    components: {
+        Header,
+        Footer
+    }
 };
 
 </script>
