@@ -11,6 +11,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!--
                 <tr
                     v-for="(product, index) in products"
                     @key="index"
@@ -22,6 +23,7 @@
                     <td v-model="product.price">{{ product.price }}</td>
                     <td v-model="product.price">{{ product.description }}</td>
                 </tr>
+                -->
             </tbody>
         </table>
         <modal

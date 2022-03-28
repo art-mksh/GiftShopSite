@@ -1,11 +1,15 @@
-//require('./bootstrap');
-import Vue from 'vue'
+require('./bootstrap');
+require('alpinejs');
+
+//import Vue from 'vue'
 //import * as Vue from 'vue'
+import { createApp } from 'vue';
 
 
-import VueRouter from 'vue-router'
+//import VueRouter from 'vue-router'
+import { useRouter, createRouter, createWebHistory } from 'vue-router'
 
-Vue.use(VueRouter)
+//useRouter()
 
 
 import App from './views/App'
@@ -18,15 +22,24 @@ import Confirmation from './views/Confirmation'
 import UserBoard from './views/UserBoard'
 import Admin from './views/Admin'
 import Header from './views/components/Header'
+//import Orders from './views/components/Admin/Orders'
+import Cart from "./views/store/cart/index";
 
 
-const router = new VueRouter({
-    mode: 'history',
+//const router = new VueRouter({
+const router = createRouter({
+    //mode: 'history',
+    history: createWebHistory(),
     routes: [
         {
             path: '/',
             name: 'home',
             component: Home
+        },
+        {
+            path: '/cart',
+            name: 'cart',
+            component: Cart
         },
         {
             path: '/login',
@@ -123,8 +136,17 @@ router.beforeEach((to, from, next) => {
     }
 })
 
+createApp
+
+const app = createApp({
+    el: '#app',
+    components: { App },
+}).use(router).mount('#app');
+
+/*
 const app = new Vue({
     el: '#app',
     components: { App },
     router,
 });
+*/

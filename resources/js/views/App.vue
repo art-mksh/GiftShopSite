@@ -86,8 +86,8 @@
 
 //import Header from "./components/Header";
 import Footer from "./components/Footer.vue";
-const Header = () => import("./components/Header");
-
+//const Header = () => import("./components/Header");
+import Header from "./components/Header.vue";
 
 export default {
     //components: {
