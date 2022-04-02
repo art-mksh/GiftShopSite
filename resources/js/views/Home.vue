@@ -1,13 +1,8 @@
 <template>
-  <div>
+    <div>
         <!-- HEADER -->
-            <div
-                class="
-                   container
-                "
-            >
-
-<!--
+        <div class="container">
+            <!--
                         <div class="row">
 
                             <div class="col-md-2">
@@ -67,6 +62,7 @@
 
                 </div>
 -->
+            <!--
                     <header class="main-header">
                         <div class="container row">
                             <div class="header-inner">
@@ -163,9 +159,11 @@
                             </div>
                         </div>
                     </header>
-            </div>
+
+-->
+        </div>
         <!-- (END) HEADER -->
-<!--
+        <!--
             <div
                 class="
                     container-fluid
@@ -182,66 +180,97 @@
 -->
         <!--  v-for="(product, index) in products" @key="index"  -->
 
-            <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                <div class="row">
-                    <div
-
-                    class="col-md-4 product-box"
-                    v-for="(product, index) in products" :key="index" >
-                    <router-link :to="{ path: '/products/' + product.id }">
-                        <img :src="product.image" :alt="product.name" />
-                        <h5>
-                        <span v-html="product.name"></span>
-                        <span class="small-text text-muted float-right"
-                            >$ {{ product.price }}</span
+                    <div class="row">
+                        <div
+                            class="col-md-4 product-box"
+                            v-for="(product, index) in products"
+                            :key="index"
                         >
-                        </h5>
-                        <button class="col-md-4 btn btn-sm btn-primary float-right">
-                        Buy Now
-                        </button>
-                    </router-link>
+                        <!--    <router-link
+                                :to="{ path: '/products/' + product.id }"
+                            > -->
+                                <img
+                                    :src="product.image"
+                                    :alt="product.name"
+                                    style="height: 10em"
+                                />
+                                <h5>
+                                    <span v-html="product.name"></span>
+                                    <span
+                                        class="small-text text-muted float-right"
+                                        >$ {{ product.price }}</span
+                                    >
+                                </h5>
+                                <button
+                                    class="col-md-4 btn btn-sm btn-primary float-right"
+                                    @click="addItemToCart"
+                                >
+                                    Удалить из корзины
+                                </button>
+                                <button
+                                    class="col-md-4 btn btn-sm btn-primary float-right"
+                                    @click="addItemToCart(product.id)"
+
+                                >
+                                    Добавить в корзину
+                                </button>
+                           <!-- </router-link> -->
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-            </div>
-  </div>
+        </div>
+    </div>
 </template>
 
-    <script>
+<script>
+
+//import useCartStore from "../store/cart/Cart";
+import useCartStore from "../views/store/cart/Cart";
+
 export default {
-  data() {
-    return {
-      products: [],
-    };
-  },
-  mounted() {
-    axios
-      .get("api/products/")
-      .then((response) => (this.products = response.data));
-  },
+    setup() {
+        console.log('home setup')
+        const {cart_items_count, removeItemToCart, addItemToCart} = useCartStore();
+        return {
+                    cart_items_count,
+                    removeItemToCart,
+                    addItemToCart
+                };
+    },
+    data() {
+        return {
+            products: [],
+        };
+    },
+    mounted() {
+        axios
+            .get("api/products/")
+            .then((response) => (this.products = response.data));
+    },
 };
 </script>
 
- <style scoped>
+<style scoped>
 .small-text {
-  font-size: 14px;
+    font-size: 14px;
 }
 .product-box {
-  border: 1px solid #cccccc;
-  padding: 10px 15px;
+    border: 1px solid #cccccc;
+    padding: 10px 15px;
 }
 .hero-section {
-  height: 30vh;
-  background: #ababab;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-top: -20px;
+    height: 30vh;
+    background: #ababab;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: -20px;
 }
 .title {
-  font-size: 60px;
-  color: #ffffff;
+    font-size: 60px;
+    color: #ffffff;
 }
 </style>

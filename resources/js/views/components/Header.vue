@@ -148,7 +148,10 @@
 <script>
 import useSiteSettings from "../../composable/SiteSettings";
 import { onMounted } from "vue";
-import useCartStore from "../../views/store/cart/Cart";
+import useCartStore from "../store/cart/Cart";
+//import useCartStore from "../store/cart";
+
+//const productStore = useProductStore();
 
 export default {
     name: "Header",
@@ -156,12 +159,16 @@ export default {
         const current_site_id = 1;
 
         const { selected_settings, getSelectedSettings } = useSiteSettings();
+
         const {cart_items_count, getCartItemCount} = useCartStore();
         //const count = computed(() => cartStore.count)
 
         onMounted(() => {
             getSelectedSettings(current_site_id);
+            //const count = computed(() => cartStore.count)
+
             getCartItemCount();
+
         });
 
           // mounted() {

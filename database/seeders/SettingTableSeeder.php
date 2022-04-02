@@ -14,6 +14,8 @@ class SettingTableSeeder extends Seeder
      */
     public function run()
     {
+
+        //Переписать, добавить статики типа HTML полей и отформатированного телефона дабы не грузть ни JS ни PHP Бэк
         $data=array(
             'site_id' => 1,
             'city_id' => 1,
